@@ -10,29 +10,29 @@
 	<string>PSAlertViewExample</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>377DF7E0-3324-49E3-AADC-3A10F726CC7A</key>
+		<key>623AD4D3D12F35C609E461D39FF9E319D7E30639</key>
 		<string>ssh://github.com/steipete/PSAlertView.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>PSAlertViewExample/PSAlertViewExample.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>377DF7E0-3324-49E3-AADC-3A10F726CC7A</key>
+		<key>623AD4D3D12F35C609E461D39FF9E319D7E30639</key>
 		<string>../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>ssh://github.com/steipete/PSAlertView.git</string>
 	<key>IDESourceControlProjectVersion</key>
-	<integer>110</integer>
+	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>377DF7E0-3324-49E3-AADC-3A10F726CC7A</string>
+	<string>623AD4D3D12F35C609E461D39FF9E319D7E30639</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>377DF7E0-3324-49E3-AADC-3A10F726CC7A</string>
+			<string>623AD4D3D12F35C609E461D39FF9E319D7E30639</string>
 			<key>IDESourceControlWCCName</key>
 			<string>PSAlertView</string>
 		</dict>

@@ -144,19 +144,34 @@
     if (buttonIndex >= 0 && buttonIndex < self.blocks.count) {
         void (^block)(NSUInteger) = self.blocks[buttonIndex];
         if (![block isEqual:NSNull.null]) {
-            block(buttonIndex);
+            //@mohandev
+            // Call the blocks in next event cycle because from iOS 8,
+            // the app is not able to present a view controller if called in the same event cycle!
+            dispatch_async(dispatch_get_main_queue(), ^{
+                block(buttonIndex);
+            });
         }
     }
 
     // Call cancel blocks. This is -1 if no cancel button is available.
     if (buttonIndex == self.cancelButtonIndex) {
-        [self _callBlocks:self.cancelBlocks withButtonIndex:buttonIndex];
+        __weak PSPDFActionSheet *weak_self = self;
+        // @mohandev
+        // Why this ? see the comment above!
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [weak_self _callBlocks:weak_self.cancelBlocks withButtonIndex:buttonIndex];
+        });
+
     }
 
     // Forward to real delegate.
     id<UIActionSheetDelegate> delegate = self.realDelegate;
     if ([delegate respondsToSelector:_cmd]) {
-        [delegate actionSheet:actionSheet clickedButtonAtIndex:buttonIndex];
+        // @mohandev
+        // Why this ? see the comment above!
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [delegate actionSheet:actionSheet clickedButtonAtIndex:buttonIndex];
+        });
     }
 }
 
