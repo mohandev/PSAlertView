@@ -31,6 +31,7 @@
 }
 
 - (id)initWithTitle:(NSString *)title {
+    _allowsTapToDismiss = YES;
     return self = [super initWithTitle:title delegate:self cancelButtonTitle:nil destructiveButtonTitle:nil otherButtonTitles:nil];
 }
 
